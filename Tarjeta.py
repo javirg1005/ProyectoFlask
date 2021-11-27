@@ -21,7 +21,6 @@ spark.conf.set('spark.sql.repl.eagerEval.enabled', True)
 df_cards.createOrReplaceTempView("TCARDS")
 df_weather.createOrReplaceTempView("TWEATHER")
 
-
 #Consultas
 '''
 dfgastosSun = spark.sql("")
@@ -29,14 +28,11 @@ dfgastosSun
 '''
 
 dfsectores = spark.sql("SELECT SECTOR, AVG(IMPORTE) FROM TCARDS GROUP BY SECTOR;")
+dfgastosMonth = spark.sql("SELECT MONTH(DIA) AS `MES`, ROUND(SUM(IMPORTE), 2) AS `IMPORTES` FROM TCARDS GROUP BY `MES` ORDER BY `MES`;")
+dfgastosSummer = spark.sql("SELECT MONTH(DIA) AS `MES`, FRANJA_HORARIA, ROUND(SUM(IMPORTE), 2) AS `IMPORTE TOTAL` FROM TCARDS WHERE MONTH(DIA) BETWEEN 6 AND 8 GROUP BY MONTH(DIA), FRANJA_HORARIA ORDER BY `IMPORTE TOTAL` DESC LIMIT 10;")
 
 '''
-
-dfgastosMonth = spark.sql("")
-dfgastosSummer = spark.sql("")
-
 dfgastosRain = spark.sql("")
-
 dfgastosXtrem = spark.sql("")
 '''
 
@@ -46,6 +42,11 @@ run_with_ngrok(app)
 @app.route("/") 
 def home(): 
     return "<h1>Pruebas de llamada de la API</h1>"
+
+@app.route('/api/GastoHorarioVerano', methods=['GET'])
+def get_users():
+    response = dfsectores
+    return jsonify(response)
 
 @app.route('/api/v1/GastoSector', methods=['GET'])
 def get_users():
