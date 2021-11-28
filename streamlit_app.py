@@ -12,7 +12,7 @@ with col3:
     st.write("")
 
 
-DATA_URL = ('http://dbc7-35-229-110-173.ngrok.io')
+DATA_URL = ('http://646b-35-229-110-173.ngrok.io')
 
 def recoger(url):
     response = requests.get(url)
@@ -71,25 +71,6 @@ with colSectores:
             'color' : {'field': 'SECTOR'}
         },
         'config': {
-            'background': "rgba(0, 0, 0, 0)",
-            'axis': {
-                'labelColor': '#FFF',
-                'titleColor': '#FFF',
-                'gridColor': '#FFF'
-            },
-            'title': {
-                'color': '#FFF',
-                'subtitleColor': '#FFF'
-            },
-            'domain': {
-                'domainColor': "#FFF"
-            },
-            'ticks': {
-                'tickColor': "#FFF"
-            },
-            'grid': {
-                'gridColor': "#FFF"
-            },
             'legend': {
                 'disable': True
             }
@@ -113,25 +94,6 @@ with colMeses:
             }}
         },
         'config': {
-            'background': "rgba(0, 0, 0, 0)",
-            'axis': {
-                'labelColor': '#FFF',
-                'titleColor': '#FFF',
-                'gridColor': '#FFF'
-            },
-            'title': {
-                'color': '#FFF',
-                'subtitleColor': '#FFF'
-            },
-            'domain': {
-                'domainColor': "#FFF"
-            },
-            'ticks': {
-                'tickColor': "#FFF"
-            },
-            'grid': {
-                'gridColor': "#FFF"
-            },
             'legend': {
                 'disable': True
             }
@@ -157,25 +119,6 @@ with colSummer:
             }}
         },
         'config': {
-            'background': "rgba(0, 0, 0, 0)",
-            'axis': {
-                'labelColor': '#FFF',
-                'titleColor': '#FFF',
-                'gridColor': '#FFF'
-            },
-            'title': {
-                'color': '#FFF',
-                'subtitleColor': '#FFF'
-            },
-            'domain': {
-                'domainColor': "#FFF"
-            },
-            'ticks': {
-                'tickColor': "#FFF"
-            },
-            'grid': {
-                'gridColor': "#FFF"
-            },
             'legend': {
                 'disable': True
             }
@@ -199,25 +142,6 @@ with colWinter:
             }}
         },
         'config': {
-            'background': "rgba(0, 0, 0, 0)",
-            'axis': {
-                'labelColor': '#FFF',
-                'titleColor': '#FFF',
-                'gridColor': '#FFF'
-            },
-            'title': {
-                'color': '#FFF',
-                'subtitleColor': '#FFF'
-            },
-            'domain': {
-                'domainColor': "#FFF"
-            },
-            'ticks': {
-                'tickColor': "#FFF"
-            },
-            'grid': {
-                'gridColor': "#FFF"
-            },
             'legend': {
                 'disable': True
             }
@@ -241,25 +165,6 @@ with colTemp:
             }},
         },
         'config': {
-            'background': "rgba(0, 0, 0, 0)",
-            'axis': {
-                'labelColor': '#FFF',
-                'titleColor': '#FFF',
-                'gridColor': '#FFF'
-            },
-            'title': {
-                'color': '#FFF',
-                'subtitleColor': '#FFF'
-            },
-            'domain': {
-                'domainColor': "#FFF"
-            },
-            'ticks': {
-                'tickColor': "#FFF"
-            },
-            'grid': {
-                'gridColor': "#FFF"
-            },
             'legend': {
                 'labelColor': '#FFF',
                 'titleColor': '#FFF'
